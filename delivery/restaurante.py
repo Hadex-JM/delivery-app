@@ -67,7 +67,6 @@ class Restaurante:
     def marcar_disponivel(self, codigo: int) -> None:
         self.buscar_produto(codigo).marcar_disponivel()
 
-    # ----- caso de uso: ver cardápio -----
     def cardapio(self, so_disponiveis: bool = True) -> list[Produto]:
         return [p for p in self._cardapio if p.disponivel or not so_disponiveis]
 
